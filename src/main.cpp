@@ -12,6 +12,7 @@ int main() {
         if (!token.empty()) {
             std::cout << token << std::endl;
         }
+
     }
 
     return 0;
