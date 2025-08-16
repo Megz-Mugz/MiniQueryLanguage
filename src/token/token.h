@@ -1,5 +1,7 @@
 #include <string>
 
+
+// TODO Add more later if needed
 enum class TokenType {
     // Keywords
     CREATE, INSERT, UPDATE, DESTROY, TABLE, SET, WHERE,
