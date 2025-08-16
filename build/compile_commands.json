@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/megzmugz/Desktop/cpp/MiniQueryLanguage/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++2b -arch arm64 -o CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o -c /Users/megzmugz/Desktop/cpp/MiniQueryLanguage/src/main.cpp",
+  "file": "/Users/megzmugz/Desktop/cpp/MiniQueryLanguage/src/main.cpp",
+  "output": "CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o"
+}
+]

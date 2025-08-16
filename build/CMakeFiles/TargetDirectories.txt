@@ -1,0 +1,3 @@
+/Users/megzmugz/Desktop/cpp/MiniQueryLanguage/build/CMakeFiles/MiniQueryLanguage.dir
+/Users/megzmugz/Desktop/cpp/MiniQueryLanguage/build/CMakeFiles/edit_cache.dir
+/Users/megzmugz/Desktop/cpp/MiniQueryLanguage/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,17 @@
+# ninja log v5
+0	411	1755359640104595164	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	23b3962bd025b104
+412	517	1755359640211149275	MiniQueryLanguage	ad1faf6bf18c8483
+2	366	1755364406604941807	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+367	471	1755364406709786897	MiniQueryLanguage	ad1faf6bf18c8483
+3	245	1755364822678641846	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+245	347	1755364822780544046	MiniQueryLanguage	ad1faf6bf18c8483
+3	339	1755364862240995877	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+339	426	1755364862328643359	MiniQueryLanguage	ad1faf6bf18c8483
+2	346	1755364874999806610	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+346	437	1755364875091125996	MiniQueryLanguage	ad1faf6bf18c8483
+4	487	1755365110067552370	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+487	620	1755365110201581496	MiniQueryLanguage	ad1faf6bf18c8483
+15	453	1755366532528178792	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+453	557	1755366532633312321	MiniQueryLanguage	ad1faf6bf18c8483
+2	431	1755366609175757639	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	c00735931f9ceadd
+431	542	1755366609287950671	MiniQueryLanguage	ad1faf6bf18c8483
