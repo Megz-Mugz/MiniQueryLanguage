@@ -2,17 +2,21 @@
 #include <sstream>
 #include <string>
 #include "token/token.h"
+#include "lexer/lexer.h"
+#include "engine/engine.h"
 
 int main() {
-    std::string input = "INSERT INTO orders VALUES (123, 'john doe')";
-    std::istringstream iss(input);
 
-    std::string token;
-    while (std::getline(iss, token, ' ')) {
-        if (!token.empty()) {
-            std::cout << token << std::endl;
-        }
-    }
+    std::string input = "INSERT INTO Persons (PersonID, LastName, FirstName, Address, City)\n"
+                        "VALUES (1, \"Doe\", \"John\", \"123 Main St\", \"New York\");";
+
+    // give input to the lexer
+    Engine db;
+
+    Lexer lexer;
+    lexer.tokenize(input);
+    lexer.get_lexins();
+
 
     return 0;
 }

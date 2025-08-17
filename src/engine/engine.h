@@ -1,14 +1,24 @@
-//
-// Created by Rohan Mengle on 8/16/25.
-//
-
-#ifndef MINIQUERYLANGUAGE_ENGINE_H
-#define MINIQUERYLANGUAGE_ENGINE_H
+#include <iostream>
+#include <unordered_map>
+#include "table.h"
+#include <string>
 
 
-class engine {
+class Engine {
 
+public:
+
+
+
+    void create_engine(){
+
+    }
+
+    std::size_t table_size(){ return tables.size(); }
+
+    bool is_empty() { return tables.size() == 0; }
+
+
+private:
+    std::vector<Table> tables;
 };
-
-
-#endif //MINIQUERYLANGUAGE_ENGINE_H
