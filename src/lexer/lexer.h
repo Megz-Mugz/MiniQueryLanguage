@@ -1,7 +1,9 @@
 #include <iostream>
 #include "../token/token.h"
+#include "grammar/grammar.h"
 #include <vector>
 #include <unordered_map>
+
 
 
 /*
@@ -14,29 +16,10 @@
  * 4. once line is finished, you will have list of Tokens
  * */
 
-static std::unordered_map<std::string, TokenType> keywords = {
-        {"CREATE", TokenType::CREATE},
-        {"INSERT", TokenType::INSERT},
-        {"INTO", TokenType::INTO},
-        {"UPDATE", TokenType::UPDATE},
-        {"DESTROY", TokenType::DESTROY},
-        {"TABLE", TokenType::TABLE},
-        {"WHERE", TokenType::WHERE}
-};
-
-static std::unordered_map<char, TokenType> symbols = {
-        {'(', TokenType::LEFT_PARENTHESIS},
-        {')', TokenType::RIGHT_PARENTHESIS},
-        {',', TokenType::COMMA},
-        {';', TokenType::SEMICOLON},
-        {'=', TokenType::EQUAL}
-};
-
-
 class Lexer{
 
 public:
-    Lexer() {}
+    Lexer() = default;
 
     // input cannot be modified inside this method
     void tokenize(const std::string& input) {
@@ -51,9 +34,9 @@ public:
             if (current_letter == ' ' || current_letter == '\n' || current_letter == '\t' || current_letter == '\r') {
 
                 if (!word.empty()){
-                    auto keyword_it = keywords.find(word);
+                    auto keyword_it = Grammar::keywords.find(word);
 
-                    if (keyword_it != keywords.end()){ // keyword
+                    if (keyword_it != Grammar::keywords.end()){ // keyword
                         Tokens.emplace_back(keyword_it->second, word);
                     } else { // identifier
                         Tokens.emplace_back(TokenType::IDENTIFIER, word); // use TABLE_NAME if you don't have IDENTIFIER
@@ -64,15 +47,15 @@ public:
             }
 
             // symbols -> flush current word (if any), then emit symbol token
-            auto symbols_it = symbols.find(current_letter);
+            auto symbols_it = Grammar::symbols.find(current_letter);
 
-            if (symbols_it != symbols.end()){
+            if (symbols_it != Grammar::symbols.end()){
 
                 if (!word.empty()){
 
-                    auto keyword_it = keywords.find(word);
+                    auto keyword_it = Grammar::keywords.find(word);
 
-                    if (keyword_it != keywords.end()){
+                    if (keyword_it != Grammar::keywords.end()){
                         Tokens.emplace_back(keyword_it->second, word);
                     } else {
                         Tokens.emplace_back(TokenType::IDENTIFIER, word); // or TABLE_NAME
@@ -87,13 +70,12 @@ public:
             word += current_letter;
         }
 
-        // flush trailing word at EOF
+        // flush trailing word at EOL
         if (!word.empty()){
-            std::string upper = word;
-            std::transform(upper.begin(), upper.end(), upper.begin(), ::toupper);
 
-            auto keyword_it = keywords.find(upper);
-            if (keyword_it != keywords.end()){
+            auto keyword_it = Grammar::keywords.find(word);
+
+            if (keyword_it != Grammar::keywords.end()){
                 Tokens.emplace_back(keyword_it->second, word);
             } else {
                 Tokens.emplace_back(TokenType::IDENTIFIER, word); // or TABLE_NAME
@@ -101,10 +83,9 @@ public:
         }
     }
 
-
     // okay for testing purposes
     void get_lexins(){
-        for (Token token : Tokens){
+        for (const auto& token : Tokens){
             token.display_meta_data();
         }
     }

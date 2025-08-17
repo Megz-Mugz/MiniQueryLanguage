@@ -60,3 +60,7 @@
 3	429	1755394540223213760	CMakeFiles/MiniQueryLanguage.dir/src/lexer/lexer.cpp.o	993dab7001279903
 2	581	1755394540374210671	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	2af3c5a57bbdae9d
 581	688	1755394540482042894	MiniQueryLanguage	3b5d23ac7dcae3aa
+2	585	1755425218647449113	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	2af3c5a57bbdae9d
+585	706	1755425218770745036	MiniQueryLanguage	3b5d23ac7dcae3aa
+2	491	1755425289516157260	CMakeFiles/MiniQueryLanguage.dir/src/main.cpp.o	2af3c5a57bbdae9d
+491	574	1755425289599796818	MiniQueryLanguage	3b5d23ac7dcae3aa
